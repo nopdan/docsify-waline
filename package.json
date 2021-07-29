@@ -1,0 +1,26 @@
+{
+  "name": "docsify-waline",
+  "version": "1.0.0",
+  "description": "waline comment plugin for docsify",
+  "main": "docsify-waline.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "minify": "esbuild docsify-waline.js --outfile=docsify-waline.min.js --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cxcn/docsify-waline.git"
+  },
+  "keywords": [
+    "docsify",
+    "plugin",
+    "waline",
+    "comment"
+  ],
+  "author": "cxcn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cxcn/docsify-waline/issues"
+  },
+  "homepage": "https://github.com/cxcn/docsify-waline#readme"
+}
