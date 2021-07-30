@@ -4,14 +4,14 @@ function install(hook, vm) {
     console.warn('sorry, waline.serverURL must be required.');
     return;
   }
-  const dom = Docsify.dom;
   var w = false;
 
   hook.mounted((_) => {
+    const dom = Docsify.dom;
     const div = dom.create('div');
     div.id = 'waline';
     const main = dom.getNode('#main');
-    div.style = `width: ${main.clientWidth}px; margin: 0 auto 20px;`;
+    div.style = `width: ${main.clientWidth}px; margin: 0 auto 20px; padding: 0 1rem`;
     dom.appendTo(dom.find('.content'), div);
     options.el = document.getElementById('waline');
   });
