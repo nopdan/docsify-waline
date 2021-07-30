@@ -4,6 +4,8 @@ function install(hook, vm) {
     console.warn('sorry, waline.serverURL must be required.');
     return;
   }
+  options.docPath = options.docPath || 'hash';
+
   var w = false;
 
   hook.mounted((_) => {
@@ -20,7 +22,8 @@ function install(hook, vm) {
     if (w) {
       w.destroy();
     }
-    options.path = location.hash;
+    options.path = window.location[options.docPath];
+    // console.log(options.path);
     w = Waline(options);
     // console.log(options);
   });
