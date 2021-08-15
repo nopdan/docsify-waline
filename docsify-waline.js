@@ -13,7 +13,7 @@ function install(hook, vm) {
     const div = dom.create('div');
     div.id = 'waline';
     const main = dom.getNode('#main');
-    div.style = `width: ${main.clientWidth}px; margin: 0 auto 20px; padding: 0 1rem`;
+    div.style = `width: ${main.clientWidth}px; margin: 0 auto 20px;`;
     dom.appendTo(dom.find('.content'), div);
     options.el = document.getElementById('waline');
   });
