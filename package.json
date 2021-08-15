@@ -1,6 +1,6 @@
 {
   "name": "docsify-waline",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "waline comment plugin for docsify",
   "main": "docsify-waline.js",
   "scripts": {
