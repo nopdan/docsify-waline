@@ -14,7 +14,8 @@ A simple comment plugin for docsify.
   window.$docsify = {
     waline: {
         serverURL: "https://your-domain.vercel.app",
-        docPath: "default: hash", // 对应 waline 的 path 参数
+        visitor: true,
+        // 不支持 el 和 path 参数自定义
     }
   }
 </script>
@@ -26,7 +27,3 @@ A simple comment plugin for docsify.
 <script src="//cdn.jsdelivr.net/npm/docsify-waline/docsify-waline.min.js"></script>
 
 ```
-
-## 其他
-
-暂不支持浏览量统计和评论数统计。
