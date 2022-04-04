@@ -1,16 +1,16 @@
 
 # docsify-waline
 
-A Docsify comment plugin for docsify that supports visitor statistics.
+waline 的 docsify 评论插件，支持阅读量统计。
 
-English | [简体中文](./README.zh-CN.md)
+[English](README.md) | 简体中文
 
-## Begin
+## 开始之前
 
-Enter [waline official website](https://waline.js.org/en/guide/get-started.html)  
-Configure 'database' and 'server' according to the documentation
+进入 [waline 官网](https://waline.js.org/guide/get-started.html)  
+根据文档配置好 `数据库` 和 `服务端`
 
-## Usage
+## 使用
 
 ```html
 <script>
@@ -18,7 +18,7 @@ Configure 'database' and 'server' according to the documentation
     waline: {
         serverURL: "https://your-domain.vercel.app",
         visitor: true,
-        // not support custom `el` and `path`
+        // 不支持 el 和 path 参数自定义
     }
   }
 </script>
