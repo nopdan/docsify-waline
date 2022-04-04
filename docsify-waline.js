@@ -1,13 +1,13 @@
 $docsify.plugins = [].concat(function (hook, vm) {
-  var options = vm.config.waline || {};
+  let options = vm.config.waline || {};
   options.el = "#waline";
   if (!options.serverURL) {
     console.warn("sorry, waline.serverURL must be required.");
     return;
   }
 
-  var language = vm.config.count.language || "english";
-  var suffix;
+  let language = vm.config.count.language || "english";
+  let suffix;
   switch (language) {
     case "english":
       suffix = "></span>&nbsp;times";
@@ -21,7 +21,7 @@ $docsify.plugins = [].concat(function (hook, vm) {
       suffix = "></span>&nbsp;times";
   }
 
-  var w = false;
+  let w = false;
   // 每次路由切换时数据全部加载完成后调用，没有参数。
   hook.doneEach((_) => {
     if (w) {
