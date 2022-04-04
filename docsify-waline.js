@@ -6,6 +6,21 @@ $docsify.plugins = [].concat(function (hook, vm) {
     return;
   }
 
+  var language = vm.config.count.language || "english";
+  var suffix;
+  switch (language) {
+    case "english":
+      suffix = "></span>&nbsp;times";
+      break;
+    case "chinese":
+      suffix = "></span>&nbsp;次阅读";
+      console.log(suffix);
+      break;
+    default:
+      console.warn("unsupported language", language);
+      suffix = "></span>&nbsp;times";
+  }
+
   var w = false;
   // 每次路由切换时数据全部加载完成后调用，没有参数。
   hook.doneEach((_) => {
@@ -20,7 +35,7 @@ $docsify.plugins = [].concat(function (hook, vm) {
     visitor.innerHTML +=
       "&nbsp;|&nbsp;<span class=waline-visitor-count id=" +
       options.path +
-      "></span>&nbsp;次阅读";
+      suffix;
     w = Waline(options);
   });
 

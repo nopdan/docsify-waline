@@ -1,7 +1,8 @@
-
 # docsify-waline
 
 A Docsify comment plugin for docsify that supports visitor statistics.
+
+Visitor statistics rely on [docsify-count](https://github.com/827652549/docsify-count).
 
 English | [简体中文](./README.zh-CN.md)
 
@@ -15,15 +16,17 @@ Configure 'database' and 'server' according to the documentation
 ```html
 <script>
   window.$docsify = {
+    count: {
+      language: "", // chinese or english(:default)
+    },
     waline: {
-        serverURL: "https://your-domain.vercel.app",
-        visitor: true,
-        // not support custom `el` and `path`
+      serverURL: "https://your-domain.vercel.app",
+      visitor: true,
+      // not support custom `el` and `path`
     }
   }
 </script>
 
 <script src="//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/docsify-waline/docsify-waline.min.js"></script>
-
 ```
