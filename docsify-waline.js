@@ -14,7 +14,6 @@ $docsify.plugins = [].concat(function (hook, vm) {
       break;
     case "chinese":
       suffix = "></span>&nbsp;次阅读";
-      console.log(suffix);
       break;
     default:
       console.warn("unsupported language", language);
@@ -31,11 +30,10 @@ $docsify.plugins = [].concat(function (hook, vm) {
     options.path = path.replace(/\?.*$/, "");
     // console.log(options.path);
     // 浏览量统计
-    let visitor = document.querySelector("#main div>span");
-    visitor.innerHTML +=
-      "&nbsp;|&nbsp;<span class=waline-visitor-count id=" +
-      options.path +
-      suffix;
+    let pageview = document.querySelector(`#main div>span`);
+    if (pageview) {
+      pageview.innerHTML += `&nbsp;|&nbsp;<span class="waline-pageview-count" data-path="${options.path}"${suffix}`;
+    }
     w = Waline(options);
   });
 
