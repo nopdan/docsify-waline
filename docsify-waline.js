@@ -21,8 +21,13 @@ $docsify.plugins = [].concat(function (hook, vm) {
   }
 
   let w = false;
+  let flag = false;
+
   // 每次路由切换时数据全部加载完成后调用，没有参数。
   hook.doneEach((_) => {
+    if (!flag) { // 没有挂载上 div
+      return;
+    }
     if (w) {
       w.destroy(); // waline 存在时重新加载
     }
@@ -45,5 +50,6 @@ $docsify.plugins = [].concat(function (hook, vm) {
     waline.style = "max-width: var(--content-max-width); margin: 0 auto 20px;";
     let content = document.querySelector("section.content");
     content.appendChild(waline);
+    flag = true;
   });
 }, $docsify.plugins);
