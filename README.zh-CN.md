@@ -1,8 +1,8 @@
 # docsify-waline
 
-waline 的 docsify 评论插件，支持阅读量统计。
+waline 的 docsify 评论插件，支持浏览量统计。
 
-阅读量统计依赖 [docsify-count](https://github.com/827652549/docsify-count).
+浏览量统计依赖 [docsify-count](https://github.com/827652549/docsify-count).
 
 [English](README.md) | 简体中文
 
@@ -13,20 +13,25 @@ waline 的 docsify 评论插件，支持阅读量统计。
 
 ## 使用
 
+[导入 Waline v2](https://waline.js.org/guide/client/import.html)
+
 ```html
 <script>
   window.$docsify = {
     count: {
-      language: "", // chinese 或者 english(:默认)
+      language: "", // default:english|chinese
     },
     waline: {
-      serverURL: "https://your-domain.vercel.app",
+      // 必填。例子：https://your-domain.vercel.app
+      serverURL: "",
+      // 开启浏览量统计
       pageview: true,
+      // ...
       // 不支持 el 和 path 参数自定义
     },
   };
 </script>
 
-<script src="//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/docsify-waline/docsify-waline.min.js"></script>
+<!--导入插件-->
+<script src="https://cdn.jsdelivr.net/npm/docsify-waline@2/docsify-waline.min.js"></script>
 ```

@@ -34,7 +34,8 @@ $docsify.plugins = [].concat(function (hook, vm) {
     if (pageview) {
       pageview.innerHTML += `&nbsp;|&nbsp;<span class="waline-pageview-count" data-path="${options.path}"${suffix}`;
     }
-    w = Waline(options);
+    w = Waline.init(options);
+    Waline.pageviewCount({ serverURL: options.serverURL, path: options.path });
   });
 
   // 初始化并第一次加载完成数据后调用，只触发一次，没有参数。

@@ -1,8 +1,8 @@
 # docsify-waline
 
-A Docsify comment plugin for docsify that supports visitor statistics.
+A Docsify comment plugin for docsify that supports pageview statistics.
 
-Visitor statistics rely on [docsify-count](https://github.com/827652549/docsify-count).
+Pageview statistics rely on [docsify-count](https://github.com/827652549/docsify-count).
 
 English | [简体中文](./README.zh-CN.md)
 
@@ -13,20 +13,25 @@ Configure 'database' and 'server' according to the documentation
 
 ## Usage
 
+[Import Waline v2](https://waline.js.org/guide/client/import.html)
+
 ```html
 <script>
   window.$docsify = {
     count: {
-      language: "", // chinese or english(:default)
+      language: "", // default:english|chinese
     },
     waline: {
+      // Required example：https://your-domain.vercel.app
       serverURL: "https://your-domain.vercel.app",
+      // enable pageview count
       pageview: true,
-      // not support custom `el` and `path`
-    }
-  }
+      // ...
+      // don't support custom `el` and `path`
+    },
+  };
 </script>
 
-<script src="//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/docsify-waline/docsify-waline.min.js"></script>
+<!--Import me-->
+<script src="https://cdn.jsdelivr.net/npm/docsify-waline@2/docsify-waline.min.js"></script>
 ```
