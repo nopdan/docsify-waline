@@ -21,7 +21,7 @@ Configure 'database' and 'server' according to the documentation
     },
     waline: {
       serverURL: "https://your-domain.vercel.app",
-      visitor: true,
+      pageview: true,
       // not support custom `el` and `path`
     }
   }

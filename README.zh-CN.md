@@ -21,7 +21,7 @@ waline 的 docsify 评论插件，支持阅读量统计。
     },
     waline: {
       serverURL: "https://your-domain.vercel.app",
-      visitor: true,
+      pageview: true,
       // 不支持 el 和 path 参数自定义
     },
   };
