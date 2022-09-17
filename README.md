@@ -1,5 +1,7 @@
 # docsify-waline
 
+![](https://img.shields.io/npm/dt/docsify-waline)
+
 A Docsify comment plugin for docsify that supports pageview statistics.
 
 Pageview statistics rely on [docsify-count](https://github.com/827652549/docsify-count).
