@@ -1,6 +1,6 @@
 {
   "name": "docsify-waline",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "waline comment plugin for docsify",
   "main": "docsify-waline.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cxcn/docsify-waline.git"
+    "url": "git+https://github.com/nopdan/docsify-waline.git"
   },
   "keywords": [
     "docsify",
@@ -17,10 +17,10 @@
     "waline",
     "comment"
   ],
-  "author": "cxcn",
+  "author": "nopdan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cxcn/docsify-waline/issues"
+    "url": "https://github.com/nopdan/docsify-waline/issues"
   },
-  "homepage": "https://github.com/cxcn/docsify-waline#readme"
+  "homepage": "https://github.com/nopdan/docsify-waline#readme"
 }
